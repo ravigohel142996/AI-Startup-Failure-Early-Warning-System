@@ -11,7 +11,6 @@ from sklearn.model_selection import train_test_split
 import plotly.graph_objects as go
 import plotly.express as px
 import matplotlib.pyplot as plt
-from datetime import datetime
 
 # Set page configuration
 st.set_page_config(
@@ -349,7 +348,7 @@ def dashboard_page(model, feature_names, accuracy):
     with col2:
         st.info(f"📊 Training Accuracy: {accuracy*100:.2f}%")
     with col3:
-        st.info(f"📅 Last Updated: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+        st.info(f"📈 Training Samples: 1000")
     
     st.markdown("---")
     
@@ -630,14 +629,14 @@ def main():
     st.sidebar.title("🧭 Navigation")
     page = st.sidebar.radio(
         "Select Page",
-        ["Dashboard", "Risk Analyzer", "Analytics"],
+        ["Dashboard", "Analytics"],
         label_visibility="collapsed"
     )
     
     st.sidebar.markdown("---")
     
     # Route to appropriate page
-    if page == "Dashboard" or page == "Risk Analyzer":
+    if page == "Dashboard":
         dashboard_page(model, feature_names, accuracy)
     elif page == "Analytics":
         analytics_page(model, feature_names)

@@ -112,8 +112,7 @@ Only lightweight libraries compatible with Streamlit Cloud:
 ## 🎨 User Interface
 
 ### Navigation
-- **Dashboard**: Main risk analysis interface
-- **Risk Analyzer**: Same as Dashboard (user input and prediction)
+- **Dashboard**: Main risk analysis interface with user input and predictions
 - **Analytics**: Deep dive into model performance and data patterns
 
 ### Professional Design
